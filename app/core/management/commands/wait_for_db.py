@@ -11,7 +11,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write('Waidting for database...')
         db_conn = None
-        
+
         while not db_conn:
             try:
                 db_conn = connections['default']
